@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f5f5f7;
+  --card-bg: #ffffff;
+  --ink: #1d1d1f;
+  --secondary: #6e6e73;
+  --border: #d2d2d7;
+  --chip-bg: #ededf0;
+  --accent: #e2542b;
+}
+
+.dark {
+  --bg: #080808;
+  --bg-alt: #0a0a0c;
+  --card-bg: #1c1c1e;
+  --ink: #f5f5f7;
+  --secondary: #98989d;
+  --border: #38383a;
+  --chip-bg: #2c2c2e;
+  --accent: #e2542b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hide scrollbar on the mobile sliders but keep them scrollable */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.snap-x-mandatory {
+  scroll-snap-type: x mandatory;
+}
+.snap-center {
+  scroll-snap-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
