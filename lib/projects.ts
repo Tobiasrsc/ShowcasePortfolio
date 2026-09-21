@@ -16,6 +16,7 @@ export interface Project {
   tag: string;
   desc: string;
   tint: string;
+  image: string;
   // Detail page content
   category: string;
   tagline: string;
@@ -31,6 +32,7 @@ export const projects: Project[] = [
     tag: "Next.js · Tailwind",
     desc: "Corporate site for a Dutch law firm — practice areas, team profiles, and a bilingual EN/NL experience.",
     tint: "#e5f0ee",
+    image: "/images/joint-forces-legal.png",
     category: "Case Study",
     tagline:
       "A bilingual corporate site for a Dutch law firm, rebuilt for clarity and trust.",
@@ -90,6 +92,7 @@ export const projects: Project[] = [
     tag: "React · GSAP",
     desc: "Internal animation library — GSAP and Reanimated snippets, browsable and ready to copy into any project.",
     tint: "#f2eae0",
+    image: "/images/owow-atlas.png",
     category: "Internal Tool",
     tagline:
       "A browsable library of production-ready animation snippets for the team.",
@@ -149,6 +152,7 @@ export const projects: Project[] = [
     tag: "Next.js · AI",
     desc: "AI-powered recruitment platform — campaigns, applicant tracking and WhatsApp follow-up in one system.",
     tint: "#e6e9f2",
+    image: "/images/renewers.png",
     category: "Product",
     tagline: "An AI-powered recruitment platform, from campaign to hire.",
     meta: [
@@ -207,6 +211,7 @@ export const projects: Project[] = [
     tag: "React · Vercel",
     desc: "Client-facing project dashboard — budgets, updates and file approvals in one clean workspace.",
     tint: "#e5f0e6",
+    image: "/images/owow-dashboard.png",
     category: "Product",
     tagline: "A calm home base for clients to track their project.",
     meta: [

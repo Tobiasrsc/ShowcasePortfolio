@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/lib/projects";
 
@@ -11,9 +12,17 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
       className="group flex w-[260px] shrink-0 flex-col overflow-hidden rounded-[20px] bg-cardBg shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_16px_38px_rgba(0,0,0,0.16)] active:translate-y-0 active:shadow-[0_3px_10px_rgba(0,0,0,0.06)] md:w-full snap-center"
     >
       <div
-        className="h-[170px] w-full md:h-[180px] lg:h-[280px]"
+        className="relative h-[170px] w-full md:h-[180px] lg:h-[280px]"
         style={{ backgroundColor: project.tint }}
-      />
+      >
+        <Image
+          src={project.image}
+          alt={project.name}
+          fill
+          sizes="(min-width: 768px) 50vw, 260px"
+          className="object-cover"
+        />
+      </div>
       <div className="flex flex-col gap-2 p-5 lg:p-6">
         <div className="flex items-center justify-between">
           <h3 className="text-[18px] font-semibold text-ink lg:text-[21px]">

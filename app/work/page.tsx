@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -22,7 +23,18 @@ export default function AllWorkPage() {
               href={`/work/${p.slug}`}
               className="group flex flex-col overflow-hidden rounded-[20px] bg-cardBg shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all hover:-translate-y-0.5 hover:shadow-[0_16px_38px_rgba(0,0,0,0.16)]"
             >
-              <div className="h-[200px] w-full" style={{ backgroundColor: p.tint }} />
+              <div
+                className="relative h-[200px] w-full"
+                style={{ backgroundColor: p.tint }}
+              >
+                <Image
+                  src={p.image}
+                  alt={p.name}
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
               <div className="flex flex-col gap-2 p-6">
                 <div className="flex items-center justify-between">
                   <h2 className="text-[21px] font-semibold text-ink">{p.name}</h2>
