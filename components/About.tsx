@@ -49,7 +49,7 @@ export default function About() {
           </div>
 
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/tobias-hermans-9121a92aa"
             target="_blank"
             rel="noreferrer"
             className="group flex items-center gap-1 text-[14px] font-medium text-accent transition-all hover:brightness-110 active:brightness-75"
