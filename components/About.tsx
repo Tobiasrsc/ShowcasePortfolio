@@ -12,7 +12,7 @@ export default function About() {
         About
       </h2>
 
-      <div className="flex w-full max-w-[1280px] flex-col items-center gap-8 rounded-[24px] bg-cardBg p-8 shadow-sm md:flex-row md:items-center md:gap-10 md:p-10">
+      <div className="flex w-full max-w-content flex-col items-center gap-8 rounded-[24px] bg-cardBg p-8 shadow-sm md:flex-row md:items-center md:gap-10 md:p-10">
         <div className="relative h-[190px] w-[160px] shrink-0 overflow-hidden rounded-[18px] bg-chipBg md:h-[270px] md:w-[220px]">
           <Image
             src="/images/portrait.png"
