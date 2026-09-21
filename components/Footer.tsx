@@ -20,9 +20,14 @@ export default function Footer() {
           </a>
           <a
             href="/resume.pdf"
-            className="text-center text-[15px] text-accent transition-all hover:brightness-110 active:brightness-75"
+            className="group flex items-center justify-center gap-1 text-[15px] text-accent transition-all hover:brightness-110 active:brightness-75"
           >
-            Resume  ›
+            <span className="underline-offset-4 group-hover:underline">
+              Resume
+            </span>
+            <span className="transition-transform group-hover:translate-x-1">
+              ›
+            </span>
           </a>
         </div>
       </div>
