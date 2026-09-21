@@ -1,57 +1,19 @@
 "use client";
 
-import Image from "next/image";
 import { useRef, useState } from "react";
-
-const projects = [
-  {
-    name: "Joint Forces Legal",
-    tag: "Next.js · Tailwind",
-    desc: "Corporate site for a Dutch law firm — practice areas, team profiles, and a bilingual EN/NL experience.",
-    tint: "#e5f0ee",
-    image: "/images/joint-forces-legal.png",
-  },
-  {
-    name: "OWOW Atlas",
-    tag: "React · GSAP",
-    desc: "Internal animation library — GSAP and Reanimated snippets, browsable and ready to copy into any project.",
-    tint: "#f2eae0",
-    image: "/images/owow-atlas.png",
-  },
-  {
-    name: "Renewers.ai",
-    tag: "Next.js · AI",
-    desc: "AI-powered recruitment platform — campaigns, applicant tracking and WhatsApp follow-up in one system.",
-    tint: "#e6e9f2",
-    image: "/images/renewers.png",
-  },
-  {
-    name: "OWOW Dashboard",
-    tag: "React · Vercel",
-    desc: "Client-facing project dashboard — budgets, updates and file approvals in one clean workspace.",
-    tint: "#e5f0e6",
-    image: "/images/owow-dashboard.png",
-  },
-];
+import Link from "next/link";
+import { projects } from "@/lib/projects";
 
 function ProjectCard({ project }: { project: (typeof projects)[number] }) {
   return (
-    <a
-      href="#"
+    <Link
+      href={`/work/${project.slug}`}
       className="group flex w-[260px] shrink-0 flex-col overflow-hidden rounded-[20px] bg-cardBg shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_16px_38px_rgba(0,0,0,0.16)] active:translate-y-0 active:shadow-[0_3px_10px_rgba(0,0,0,0.06)] md:w-full snap-center"
     >
       <div
-        className="relative h-[170px] w-full overflow-hidden md:h-[180px] lg:h-[280px]"
+        className="h-[170px] w-full md:h-[180px] lg:h-[280px]"
         style={{ backgroundColor: project.tint }}
-      >
-        <Image
-          src={project.image}
-          alt={project.name}
-          fill
-          sizes="(min-width: 768px) 50vw, 100vw"
-          className="object-cover"
-        />
-      </div>
+      />
       <div className="flex flex-col gap-2 p-5 lg:p-6">
         <div className="flex items-center justify-between">
           <h3 className="text-[18px] font-semibold text-ink lg:text-[21px]">
@@ -68,7 +30,7 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
           {project.tag}
         </span>
       </div>
-    </a>
+    </Link>
   );
 }
 
@@ -128,12 +90,12 @@ export default function Work() {
         ))}
       </div>
 
-      <a
-        href="#"
+      <Link
+        href="/work"
         className="rounded-full border border-border px-6 py-[13px] text-[15px] font-medium text-ink transition-colors hover:bg-black/5 active:bg-black/[0.09] dark:hover:bg-white/[0.08] dark:active:bg-white/[0.14]"
       >
         View All Work  →
-      </a>
+      </Link>
     </section>
   );
 }

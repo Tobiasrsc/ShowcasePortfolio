@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import MobileMenu from "./MobileMenu";
 
@@ -12,29 +13,31 @@ export default function Nav() {
   return (
     <>
       <nav className="sticky top-0 z-40 flex items-center justify-between border-b border-border bg-bg px-5 py-4 md:px-10 md:py-5">
-        <span className="text-[16px] font-semibold text-ink">Tobias Hermans</span>
+        <Link href="/" className="text-[16px] font-semibold text-ink">
+          Tobias Hermans
+        </Link>
 
         {/* Desktop links — hidden below md */}
         <div className="hidden items-center gap-6 md:flex">
           {links.map((label) => (
-            <a
+            <Link
               key={label}
-              href={`#${label.toLowerCase()}`}
+              href={`/#${label.toLowerCase()}`}
               className="text-[14px] text-ink transition-opacity hover:opacity-60"
             >
               {label}
-            </a>
+            </Link>
           ))}
         </div>
 
         <div className="hidden items-center gap-5 md:flex">
           <ThemeToggle />
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             className="rounded-full bg-accent px-4 py-[9px] text-[13px] font-medium text-white transition-all hover:brightness-110 active:brightness-90"
           >
             Let&apos;s talk
-          </a>
+          </Link>
         </div>
 
         {/* Mobile hamburger — hidden md and up */}

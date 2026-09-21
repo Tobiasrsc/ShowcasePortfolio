@@ -13,10 +13,10 @@ export default function Footer() {
 
         <div className="flex w-full flex-col items-stretch gap-4 md:w-auto md:flex-row md:items-center md:gap-5">
           <a
-            href="mailto:hello@tobiasdev.com"
+            href="mailto:HermansTobias@icloud.com"
             className="rounded-full bg-accent px-7 py-4 text-center text-[15px] font-medium text-white transition-all hover:brightness-110 active:brightness-90"
           >
-            hello@tobiasdev.com
+            HermansTobias@icloud.com
           </a>
           <a
             href="/resume.pdf"

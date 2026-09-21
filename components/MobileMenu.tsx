@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 
 interface MobileMenuProps {
@@ -42,26 +43,26 @@ export default function MobileMenu({ open, onClose, links }: MobileMenuProps) {
       <div className="flex flex-1 flex-col items-center justify-center gap-9 px-8">
         <div className="flex flex-col items-center gap-7">
           {links.map((label) => (
-            <a
+            <Link
               key={label}
-              href={`#${label.toLowerCase()}`}
+              href={`/#${label.toLowerCase()}`}
               onClick={onClose}
               className="text-[28px] font-medium text-ink"
             >
               {label}
-            </a>
+            </Link>
           ))}
         </div>
 
         <ThemeToggle />
 
-        <a
-          href="#contact"
+        <Link
+          href="/#contact"
           onClick={onClose}
           className="w-[280px] rounded-full bg-accent py-4 text-center text-[16px] font-medium text-white transition-all hover:brightness-110 active:brightness-90"
         >
           Let&apos;s talk
-        </a>
+        </Link>
       </div>
     </div>
   );
