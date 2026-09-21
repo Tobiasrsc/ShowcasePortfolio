@@ -41,7 +41,7 @@ export default function About() {
             {focusAreas.map((area) => (
               <span
                 key={area}
-                className="rounded-full bg-accent/10 px-3 py-1.5 text-[12px] font-medium text-accent"
+                className="rounded-full bg-chipBg px-2.5 py-1 text-[12px] text-secondary"
               >
                 {area}
               </span>
@@ -52,9 +52,14 @@ export default function About() {
             href="https://linkedin.com"
             target="_blank"
             rel="noreferrer"
-            className="text-[14px] font-medium text-accent transition-all hover:brightness-110 active:brightness-75"
+            className="group flex items-center gap-1 text-[14px] font-medium text-accent transition-all hover:brightness-110 active:brightness-75"
           >
-            Connect on LinkedIn →
+            <span className="underline-offset-4 group-hover:underline">
+              Connect on LinkedIn
+            </span>
+            <span className="transition-transform group-hover:translate-x-1">
+              →
+            </span>
           </a>
         </div>
       </div>
