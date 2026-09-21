@@ -13,7 +13,10 @@ export default function Nav() {
   return (
     <>
       <nav className="sticky top-0 z-40 flex items-center justify-between border-b border-border bg-bg px-5 py-4 md:px-10 md:py-5">
-        <Link href="/" className="text-[16px] font-semibold text-ink">
+        <Link
+          href="/"
+          className="text-[16px] font-semibold text-ink transition-colors hover:text-accent"
+        >
           Tobias Hermans
         </Link>
 
@@ -23,9 +26,10 @@ export default function Nav() {
             <Link
               key={label}
               href={`/#${label.toLowerCase()}`}
-              className="text-[14px] text-ink transition-opacity hover:opacity-60"
+              className="group relative text-[14px] text-ink transition-colors hover:text-accent"
             >
               {label}
+              <span className="absolute -bottom-1 left-0 h-[1.5px] w-0 bg-accent transition-all duration-200 group-hover:w-full" />
             </Link>
           ))}
         </div>
